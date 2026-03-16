@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
+import heroVideo from '/images/backgroundvideo1.mp4'
 
 export default function Home() {
   const macmozzaRef = useRef(null)
@@ -18,7 +19,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <video className="hero-video" autoPlay muted loop playsInline>
-          <source src="/images/backgroundvideo1.mp4" type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
         <div className="hero-content">
         </div>
