@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g transform="rotate(-45, 16, 16)">
+    <!-- Canon -->
+    <rect x="14" y="2" width="4" height="14" rx="1" fill="#333"/>
+    <!-- Corps -->
+    <rect x="10" y="14" width="12" height="8" rx="2" fill="#555"/>
+    <!-- Crosse -->
+    <rect x="12" y="22" width="4" height="8" rx="1" fill="#8B4513"/>
+    <!-- Gachette -->
+    <rect x="18" y="18" width="2" height="4" rx="0.5" fill="#333"/>
+    <!-- Détail canon -->
+    <rect x="15" y="2" width="2" height="3" rx="0.5" fill="#666"/>
+  </g>
+</svg>

@@ -1,0 +1,267 @@
+{
+  "store": {
+    "nom": "Poulice Chicken",
+    "ville": "Tanger, Maroc",
+    "adresse": "P4RH+M8, Tangier, Morocco",
+    "note_clients": "97%",
+    "temps_livraison": "10-25 min",
+    "frais_livraison": "5.00 MAD",
+    "statut": "Temporairement fermé",
+    "id_vendeur_glovo": "858836",
+    "url_glovo": "https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng",
+    "images": {
+      "banniere": "images/banniere.jpg",
+      "logo": "images/logo.jpg"
+    }
+  },
+  "menu": {
+    "Les Burgers": [
+      {
+        "nom": "BIG S.W.A.T !!!!!!",
+        "prix_glovo": "79.80 MAD",
+        "description": "Pain brioché maison, salade, tomate, oignons rouges, 2 tenders maison, galette pomme de terre, bacon, 2 oignon rings, 2 stick mozza, cheddar fondu, 2 sauces au choix.",
+        "image": "images/big_swat.jpg"
+      },
+      {
+        "nom": "Sergent bacon !",
+        "prix_glovo": "71.40 MAD",
+        "description": "Pain brioché maison, salade, tomate, oignons rouges, 2 tenders maison, bacon, 2 onion rings, cheddar fondu, 2 sauces au choix.",
+        "image": "images/sergent_bacon.jpg"
+      },
+      {
+        "nom": "Mozza BOMB !!",
+        "prix_glovo": "81.60 MAD",
+        "description": "Pain brioché maison, salade, tomate, oignons rouges, 2 tenders maison, une galette de mozza pannée, cheddar fondu, 2 sauces au choix.",
+        "image": "images/mozza_bomb.jpg"
+      },
+      {
+        "nom": "Batata Unit !",
+        "prix_glovo": "67.90 MAD",
+        "description": "Pain brioché maison, salade, tomate, oignons rouges, 2 tenders maison, galette pomme de terre, cheddar fondu, 2 sauces au choix.",
+        "image": "images/batata_unit.jpg"
+      },
+      {
+        "nom": "Classik Poulice !",
+        "prix_glovo": "59.50 MAD",
+        "description": "Pain brioché maison, salade, tomate, oignons rouges, 2 tenders maison, cheddar fondu, 2 sauces au choix.",
+        "image": "images/classik_poulice.jpg"
+      }
+    ],
+    "Les Wraps": [
+      {
+        "nom": "W.R.A.P Bacon",
+        "prix_glovo": "67.90 MAD",
+        "description": "2 tenders maison, bacon, salade, tomate, oignons blancs, 2 sauces au choix.",
+        "image": "images/wrap_bacon.jpg"
+      },
+      {
+        "nom": "W.R.A.P Batata",
+        "prix_glovo": "67.90 MAD",
+        "description": "2 tenders maison, galette de pomme de terre, cheddar, salade, tomate, oignons blancs, 2 sauces au choix.",
+        "image": "images/wrap_batata.jpg"
+      },
+      {
+        "nom": "W.R.A.P Classik",
+        "prix_glovo": "59.50 MAD",
+        "description": "2 tenders maison, 1 cheddar, salade, tomate, oignons blancs, 2 sauces au choix.",
+        "image": "images/wrap_classik.jpg"
+      }
+    ],
+    "Les Tacos au four": [
+      {
+        "nom": "T.A.C.O.S Tenders maison + Sauce fromagère maison",
+        "prix_glovo": "69.60 MAD",
+        "description": "Galette de blé cuite au four, tenders maison, frites, sauce fromagère maison + 2 sauces au choix.",
+        "image": "images/tacos_tenders.jpg"
+      },
+      {
+        "nom": "T.A.C.O.S Poulet + Sauce fromagère maison",
+        "prix_glovo": "69.60 MAD",
+        "description": "Galette de blé cuite au four, poulet nature, frites, sauce fromagère maison + 2 sauces au choix.",
+        "image": "images/tacos_poulet.jpg"
+      },
+      {
+        "nom": "T.A.C.O.S Indy + Sauce fromagère maison",
+        "prix_glovo": "69.60 MAD",
+        "description": "Galette de blé cuite au four, poulet curry, frites, sauce fromagère maison + 2 sauces au choix.",
+        "image": "images/tacos_indy.jpg"
+      }
+    ],
+    "Chicken": [
+      {
+        "nom": "Tenders X10",
+        "prix_glovo": "129.00 MAD",
+        "description": "10 filets de tenders, 3 sauces au choix.",
+        "image": "images/tenders_x10.jpg"
+      },
+      {
+        "nom": "Tenders X5",
+        "prix_glovo": "69.00 MAD",
+        "description": "5 filets de tenders, 2 sauces au choix.",
+        "image": "images/tenders_x5.jpg"
+      },
+      {
+        "nom": "Tenders X3",
+        "prix_glovo": "49.00 MAD",
+        "description": "3 filets de tenders, 1 sauce au choix.",
+        "image": "images/tenders_x3.jpg"
+      },
+      {
+        "nom": "Tenders X2",
+        "prix_glovo": "39.00 MAD",
+        "description": "2 filets de tenders maison, 1 sauce au choix.",
+        "image": "images/tenders_x2.jpg"
+      },
+      {
+        "nom": "Tenders X1",
+        "prix_glovo": "19.00 MAD",
+        "description": "1 filet de tenders maison.",
+        "image": "images/tenders_x1.jpg"
+      }
+    ],
+    "Tex mex & Frites": [
+      {
+        "nom": "Mozza cube maison x5",
+        "prix_glovo": "36.75 MAD",
+        "description": "5 carrés mozza délicieusement fondants fait maison.",
+        "image": "images/mozza_cube_x5.jpg"
+      },
+      {
+        "nom": "Mozza cube maison x3",
+        "prix_glovo": "29.25 MAD",
+        "description": "3 carrés mozza délicieusement fondants fait maison.",
+        "image": "images/mozza_cube_x3.jpg"
+      },
+      {
+        "nom": "Frite sauce fromagère maison + Bacon",
+        "prix_glovo": "35.00 MAD",
+        "description": "Généreuse portion de frites sauce fromagère maison (type tacos) + bacon.",
+        "image": "images/frite_fromagere_bacon.jpg"
+      },
+      {
+        "nom": "Frite sauce fromagère maison + Pepperoni",
+        "prix_glovo": "35.00 MAD",
+        "description": "Généreuse portion de frites sauce fromagère maison (type tacos) + pepperoni.",
+        "image": "images/frite_fromagere_pepperoni.jpg"
+      },
+      {
+        "nom": "Frite cheddar bacon",
+        "prix_glovo": "29.00 MAD",
+        "description": "Généreuse portion de frites cheddar bacon.",
+        "image": "images/frite_cheddar_bacon.jpg"
+      },
+      {
+        "nom": "Frite cheddar pepperoni",
+        "prix_glovo": "29.00 MAD",
+        "description": "Généreuse portion de frites cheddar pepperoni.",
+        "image": "images/frite_cheddar_pepperoni.jpg"
+      },
+      {
+        "nom": "Frite sauce fromagère maison",
+        "prix_glovo": "29.00 MAD",
+        "description": "Généreuse portion de frites sauce fromagère maison (type tacos).",
+        "image": "images/frite_fromagere.jpg"
+      },
+      {
+        "nom": "Frite cheddar",
+        "prix_glovo": "20.00 MAD",
+        "description": "Généreuse portion de frites cheddar.",
+        "image": "images/frite_cheddar.jpg"
+      }
+    ],
+    "Desserts maison": [
+      {
+        "nom": "Tiramisu goût Oréo (Fait maison)",
+        "prix_glovo": "29.25 MAD",
+        "description": "Tiramisu goût Oréo fait maison.",
+        "image": "images/tiramisu_oreo.jpg"
+      },
+      {
+        "nom": "Tiramisu goût Spéculos (Fait maison)",
+        "prix_glovo": "29.25 MAD",
+        "description": "Tiramisu goût Spéculos fait maison.",
+        "image": "images/tiramisu_speculos.jpg"
+      },
+      {
+        "nom": "Brookie (Fait maison)",
+        "prix_glovo": "39.00 MAD",
+        "description": "Savoureux mélange de brownie et de cookie, une part généreuse.",
+        "image": "images/brookie.jpg"
+      }
+    ],
+    "Boissons": [
+      {
+        "nom": "Fanta Citron 25cl (Canette)",
+        "prix_glovo": "15.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/fanta_citron.png"
+      },
+      {
+        "nom": "Fanta Orange 25cl (Canette)",
+        "prix_glovo": "15.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/fanta_orange.jpg"
+      },
+      {
+        "nom": "Hawai Ananas 25cl (Canette)",
+        "prix_glovo": "15.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/hawai_ananas.jpg"
+      },
+      {
+        "nom": "Schweppes Mojito 25cl (Canette)",
+        "prix_glovo": "15.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/schweppes_mojito.jpg"
+      },
+      {
+        "nom": "Miranda Pomme",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/miranda_pomme.jpg"
+      },
+      {
+        "nom": "Miranda Orange",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/miranda_orange.jpg"
+      },
+      {
+        "nom": "Miranda Citron",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/miranda_citron.jpg"
+      },
+      {
+        "nom": "Coca Cola 25cl (Canette)",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/coca_cola.jpg"
+      },
+      {
+        "nom": "Pepsi 25cl (Canette)",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/pepsi.jpg"
+      },
+      {
+        "nom": "Pom's 25cl (Canette)",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/poms.png"
+      },
+      {
+        "nom": "Seven-Up 25cl (Canette)",
+        "prix_glovo": "12.00 MAD",
+        "description": "Une bonne boisson fraîche.",
+        "image": "images/seven_up.jpg"
+      },
+      {
+        "nom": "Eau 33cl (Bouteille)",
+        "prix_glovo": "8.00 MAD",
+        "description": "Eau plate.",
+        "image": "images/eau.jpg"
+      }
+    ]
+  }
+}
