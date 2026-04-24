@@ -1399,7 +1399,7 @@ input, textarea, select { font-family: inherit; }
     left: 10px; right: 10px;
   }
 
-  .nav-logo { display: none; }
+  .nav-logo { display: none !important; }
   .nav-logo-mobile { display: block; }
   .nav-logo-mobile img {
     height: 60px;
@@ -1412,26 +1412,57 @@ input, textarea, select { font-family: inherit; }
     position: fixed;
     top: 0; left: 0; right: 0;
     bottom: 0;
-    background: rgba(10,10,10,.98);
+    background: rgba(10,10,10,.99);
     backdrop-filter: blur(20px);
+    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     transform: translateX(100%);
     transition: transform .5s var(--ease-out);
-    z-index: 1000;
+    z-index: 1001;
+    padding: 80px 30px;
+    overflow-y: auto;
   }
 
-  .nav-links.active { transform: translateX(0); }
+  .nav-links.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
 
   .nav-left, .nav-right {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     flex: none;
-    gap: 24px;
+    gap: 28px;
+    width: 100%;
   }
 
-  .nav-links a:not(.nav-logo):not(.btn-commander) {
+  .nav-links > a:not(.nav-logo):not(.btn-commander) {
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .nav-left > a,
+  .nav-right > a:not(.btn-commander) {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bone);
+    text-align: center;
+  }
+
+  .nav-left > a:hover,
+  .nav-right > a:not(.btn-commander):hover {
+    color: var(--tape);
+  }
+
+  .nav-links .btn-commander {
+    margin-top: 20px;
+    width: 100%;
   }
 
   .hero {
