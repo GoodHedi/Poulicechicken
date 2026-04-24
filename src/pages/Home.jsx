@@ -5,20 +5,6 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="hero">
-        {/* Police tapes décoratives */}
-        <div className="police-tape police-tape-top">
-          <div className="police-tape-content">
-            <span>Crime Scene</span>
-            <span>Do Not Cross</span>
-            <span>Poulice Chicken</span>
-            <span>Crispy Inside</span>
-            <span>Crime Scene</span>
-            <span>Do Not Cross</span>
-            <span>Poulice Chicken</span>
-            <span>Crispy Inside</span>
-          </div>
-        </div>
-
         <div className="hero-content">
           <h1>
             Poulice <span className="rush-flow gradient-chicken">Chicken</span>
@@ -41,19 +27,6 @@ export default function Home() {
             <Link to="/menu" className="btn-hero-ghost">
               Voir le menu
             </Link>
-          </div>
-        </div>
-
-        <div className="police-tape police-tape-bottom">
-          <div className="police-tape-content">
-            <span>Wanted</span>
-            <span>10-25 min</span>
-            <span>97% Satisfait</span>
-            <span>Tanger Only</span>
-            <span>Wanted</span>
-            <span>10-25 min</span>
-            <span>97% Satisfait</span>
-            <span>Tanger Only</span>
           </div>
         </div>
 

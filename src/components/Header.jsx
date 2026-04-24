@@ -25,6 +25,12 @@ export default function Header() {
             </a>
           </div>
         </div>
+
+        {/* Commander button mobile - shows in mobile nav */}
+        <a href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng" target="_blank" rel="noopener noreferrer" className="btn-commander-mobile">
+          <span>Commander</span>
+        </a>
+
         <button className="hamburger" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>
           <span></span><span></span><span></span>
         </button>
