@@ -1,41 +1,13 @@
-import { Link } from 'react-router-dom'
-
 export default function Home() {
   return (
     <>
       {/* HERO */}
       <section className="hero">
-        <div className="hero-content">
-          <h1>
-            Poulice <span className="rush-flow gradient-chicken">Chicken</span>
-          </h1>
-          <p className="hero-subtitle">Crispy · Tanger · Depuis 2024</p>
-          <p>
-            Tenders croustillants, panure secrète, sauces maison.
-            La recette qui rend toute la ville <strong>complice</strong>.
-          </p>
-          <div className="hero-cta-group">
-            <a
-              href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-hero-primary"
-            >
-              Commander sur Glovo
-              <span aria-hidden>→</span>
-            </a>
-            <Link to="/menu" className="btn-hero-ghost">
-              Voir le menu
-            </Link>
-          </div>
-        </div>
-
-        <div className="hero-meta">
-          <span>Dossier #001</span>
-          <span>Tanger, Maroc</span>
-          <span>Livraison 5 MAD</span>
-        </div>
+        <img src="/images/logo2.png" alt="Poulice Chicken" className="hero-logo" />
       </section>
+
+      {/* SECTION VIDE */}
+      <section className="section-blank" aria-hidden="true"></section>
 
       {/* NOTRE RESTAURANT */}
       <section className="section-location" id="restaurant">

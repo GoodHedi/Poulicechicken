@@ -3,7 +3,7 @@ export default function Contact() {
     <>
       {/* PAGE HEADER */}
       <div className="page-header">
-        <h1>Contact</h1>
+        <h1 data-label="NOUS  CONTACTER">Contact</h1>
         <span className="underline-deco"></span>
       </div>
 

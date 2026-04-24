@@ -24,6 +24,22 @@
 }
 
 @font-face {
+  font-family: 'Cimo One';
+  src: url('/fonts/cimo-one-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PC Merchis';
+  src: url('/fonts/pcmerchis-condensed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'DxMonstral';
   src: url('/fonts/dxmonstral.otf') format('opentype');
   font-weight: normal;
@@ -335,8 +351,8 @@ input, textarea, select { font-family: inherit; }
   justify-content: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 20% 30%, rgba(228,18,30,.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(255,214,10,.08) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.7) 60%, var(--night) 100%),
+    url('/images/backgrounds/banniere-home.jpg') center/cover no-repeat,
     linear-gradient(180deg, var(--ink) 0%, var(--night) 100%);
 }
 
@@ -376,24 +392,19 @@ input, textarea, select { font-family: inherit; }
   padding-top: 40px;
 }
 
-/* Wanted badge over hero */
-.hero-content::before {
-  content: "DOSSIER #001 — RECHERCHÉ";
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: 6px;
-  color: var(--tape);
-  padding: 10px 24px;
-  border: 1px solid rgba(255,214,10,.35);
-  border-radius: 999px;
-  background: rgba(255,214,10,.05);
-  backdrop-filter: blur(10px);
-  margin-bottom: 40px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 4px 20px rgba(0,0,0,.4);
-  text-shadow: 0 0 20px rgba(255,214,10,.5);
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  width: min(70vw, 620px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,.6));
 }
+
+@media (max-width: 640px) {
+  .hero-logo { width: min(82vw, 460px); }
+}
+
 
 .hero h1 {
   font-family: 'Choco Foodie', 'Poppins', sans-serif;
@@ -407,6 +418,11 @@ input, textarea, select { font-family: inherit; }
     0 2px 0 rgba(0,0,0,.2),
     0 6px 12px rgba(0,0,0,.6),
     0 0 80px rgba(255,214,10,.15);
+}
+
+.hero h1 .pc-merchis {
+  font-family: 'PC Merchis', sans-serif;
+  letter-spacing: .02em;
 }
 
 .hero h1 .rush-flow {
@@ -953,7 +969,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .page-header h1::before {
-  content: "MENU  OFFICIEL";
+  content: attr(data-label);
   display: block;
   font-family: 'Poppins', sans-serif;
   font-size: .75rem;
@@ -1024,6 +1040,11 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(180deg, var(--tape), var(--blood));
   border-radius: 6px;
   box-shadow: 0 0 20px rgba(255,214,10,.4);
+}
+
+.category-title .cimo-italic {
+  font-family: 'Cimo One', sans-serif;
+  font-style: italic;
 }
 
 .category-title span {
@@ -1145,6 +1166,473 @@ input, textarea, select { font-family: inherit; }
   margin-right: 10px;
   vertical-align: middle;
   box-shadow: 0 0 8px var(--blood);
+}
+
+/* ==========================================================================
+   MARQUE / FRANCHISE PAGES
+   ========================================================================== */
+.marque-section {
+  padding: 90px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.marque-section--alt {
+  background: linear-gradient(180deg, transparent, rgba(255,214,10,.02), transparent);
+}
+
+.marque-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.marque-tag {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 8px 16px;
+  border: 1px solid rgba(255,214,10,.3);
+  border-radius: 999px;
+  background: rgba(255,214,10,.05);
+  margin-bottom: 28px;
+}
+
+.marque-wrap h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin-bottom: 24px;
+}
+
+.marque-wrap h2 .gold {
+  color: var(--gold);
+}
+
+.marque-wrap p {
+  color: rgba(244,241,234,.7);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.marque-wrap em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.marque-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.marque-card {
+  position: relative;
+  padding: 32px 28px;
+  background: linear-gradient(145deg, var(--ink-3) 0%, var(--ink-2) 100%);
+  border: 1px solid rgba(255,214,10,.1);
+  border-radius: 16px;
+  transition: transform .35s var(--ease-out), border-color .35s;
+}
+
+.marque-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,214,10,.3);
+}
+
+.marque-card__num {
+  font-family: 'Choco Foodie', sans-serif;
+  font-size: 2.6rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 18px;
+  opacity: .85;
+}
+
+.marque-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.marque-card p {
+  color: rgba(244,241,234,.6);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .marque-section { padding: 60px 20px; }
+  .marque-wrap h2 { font-size: 1.9rem; }
+  .marque-wrap p { font-size: .95rem; }
+}
+
+/* ==========================================================================
+   SIGNATURES (home)
+   ========================================================================== */
+.section-blank {
+  position: relative;
+  padding: 140px 32px;
+  background: #000;
+  min-height: 520px;
+}
+
+.signatures-grid {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.signature-card {
+  position: relative;
+  padding: 36px 30px;
+  background: linear-gradient(145deg, var(--ink-3) 0%, var(--ink-2) 100%);
+  border: 1px solid rgba(255,214,10,.1);
+  border-radius: 18px;
+  transition: transform .35s var(--ease-out), border-color .35s;
+  overflow: hidden;
+}
+
+.signature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity .35s;
+}
+
+.signature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,214,10,.3);
+}
+
+.signature-card:hover::before { opacity: 1; }
+
+.signature-card__num {
+  font-family: 'Choco Foodie', sans-serif;
+  font-size: 2.8rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: .9;
+}
+
+.signature-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: .01em;
+}
+
+.signature-card p {
+  color: rgba(244,241,234,.65);
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .section-signatures { padding: 70px 20px; }
+  .signatures-grid { margin-top: 40px; gap: 16px; }
+  .signature-card { padding: 28px 24px; }
+}
+
+/* ==========================================================================
+   PRODUCT MODAL
+   ========================================================================== */
+.menu-item--clickable {
+  cursor: pointer;
+}
+
+.menu-item--clickable::after {
+  content: "voir +" ;
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  font-size: .7rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.menu-item--clickable:hover::after {
+  opacity: 1;
+}
+
+.product-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn .2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.product-modal {
+  position: relative;
+  display: flex;
+  gap: 0;
+  background: linear-gradient(145deg, #1a1a1a, #0c0c0c);
+  border: 1px solid rgba(255,214,10,.2);
+  border-radius: 24px;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 92vh;
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0,0,0,.8), 0 0 0 1px rgba(255,214,10,.05);
+  animation: slideUp .3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,.08);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background .2s;
+}
+
+.product-modal__close:hover {
+  background: rgba(255,255,255,.18);
+}
+
+.product-modal__img-wrap {
+  position: relative;
+  flex: 0 0 50%;
+  overflow: hidden;
+}
+
+.product-modal__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-modal__img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, rgba(12,12,12,.6) 100%);
+  pointer-events: none;
+}
+
+.product-modal__calories-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--gold), #d4a800);
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(255,214,10,.35), inset 0 -3px 0 rgba(0,0,0,.2);
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.product-modal__cal-value {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.product-modal__cal-label {
+  font-size: .55rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-top: 4px;
+}
+
+.product-modal__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 48px 48px 40px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.product-modal__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 6px 12px;
+  border: 1px solid rgba(255,214,10,.3);
+  border-radius: 999px;
+  background: rgba(255,214,10,.05);
+}
+
+.product-modal__name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -.01em;
+}
+
+.product-modal__section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,214,10,.85);
+  margin-bottom: 6px;
+}
+
+.product-modal__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-modal__desc {
+  color: rgba(244,241,234,.72);
+  font-size: .95rem;
+  line-height: 1.65;
+}
+
+.product-modal__anecdote {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(255,214,10,.08), rgba(255,214,10,.02));
+  border: 1px solid rgba(255,214,10,.18);
+  border-left: 3px solid var(--gold);
+  border-radius: 12px;
+}
+
+.product-modal__anecdote-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  background: var(--gold);
+  color: #000;
+  border-radius: 50%;
+  transform: rotate(-4deg);
+}
+
+.product-modal__anecdote-text {
+  color: rgba(244,241,234,.85);
+  font-size: .92rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.product-modal__price {
+  font-family: 'Choco Foodie', sans-serif;
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.product-modal__price {
+  font-family: 'Choco Foodie', sans-serif;
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.product-modal__order {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: opacity .2s, transform .2s;
+  align-self: flex-start;
+}
+
+.product-modal__order:hover {
+  opacity: .85;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product-modal {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .product-modal__img-wrap {
+    flex: none;
+    max-height: 260px;
+  }
+
+  .product-modal__body {
+    padding: 24px;
+    gap: 14px;
+  }
+
+  .product-modal__name { font-size: 1.6rem; }
+  .product-modal__calories-badge { width: 72px; height: 72px; bottom: 14px; left: 14px; }
+  .product-modal__cal-value { font-size: .9rem; }
+
+  .menu-item--clickable::after { display: none; }
 }
 
 /* ==========================================================================
@@ -1355,19 +1843,56 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
-   WHATSAPP WIDGET
+   FLOATING ACTIONS (WhatsApp + Glovo)
    ========================================================================== */
-.whatsapp-widget {
+.floating-actions {
   position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 998;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Glovo button */
+.glovo-widget {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #25D366 0%, #20BA5C 100%);
+  border-radius: 50%;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow:
+    0 10px 25px -5px rgba(255,194,68,.55),
+    inset 0 1px 0 rgba(255,255,255,.3);
+  transition: all .35s var(--ease-out);
+}
+
+.glovo-widget img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.glovo-widget:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow:
+    0 18px 35px -5px rgba(255,194,68,.7);
+}
+
+/* WhatsApp button */
+.whatsapp-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: white;
   border-radius: 50%;
   text-decoration: none;
   box-shadow:
@@ -1380,7 +1905,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .whatsapp-widget:hover {
-  transform: scale(1.1) translateY(-5px);
+  transform: scale(1.1) translateY(-4px);
   box-shadow:
     0 0 0 2px rgba(37, 211, 102, .3),
     0 20px 40px -5px rgba(37, 211, 102, .7),
@@ -1391,12 +1916,11 @@ input, textarea, select { font-family: inherit; }
 .whatsapp-widget svg {
   width: 32px;
   height: 32px;
-  fill: white;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 /* ==========================================================================
@@ -1462,25 +1986,28 @@ input, textarea, select { font-family: inherit; }
 
   .nav-links {
     position: fixed;
-    top: 0; left: 0; right: 0;
-    bottom: 0;
-    background: rgba(10,10,10,.99);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    background: rgba(10,10,10,.98);
     backdrop-filter: blur(20px);
-    display: flex;
+    -webkit-backdrop-filter: blur(20px);
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 24px;
     transform: translateX(100%);
     transition: transform .5s var(--ease-out);
     z-index: 1001;
-    padding: 80px 30px;
+    padding: 100px 24px 40px;
     overflow-y: auto;
   }
 
   .nav-links.active {
     transform: translateX(0);
-    visibility: visible;
   }
 
   .nav-left, .nav-right {
@@ -1488,7 +2015,7 @@ input, textarea, select { font-family: inherit; }
     flex-direction: column;
     align-items: center;
     flex: none;
-    gap: 28px;
+    gap: 24px;
     width: 100%;
   }
 
@@ -1519,39 +2046,14 @@ input, textarea, select { font-family: inherit; }
 
   /* Commander button in mobile nav (fixed to top) */
   .btn-commander-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 14px;
-    right: 60px;
-    z-index: 1002;
-    padding: 10px 18px;
-    background: var(--tape);
-    color: var(--ink);
-    font-weight: 900;
-    font-size: .7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 999px;
-    box-shadow:
-      0 0 0 2px var(--ink),
-      0 0 0 4px var(--tape),
-      0 8px 20px -5px rgba(255,214,10,.5);
-    transition: transform .3s, box-shadow .3s;
-  }
-
-  .btn-commander-mobile:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow:
-      0 0 0 2px var(--ink),
-      0 0 0 4px var(--tape),
-      0 12px 25px -5px rgba(255,214,10,.6);
+    display: none;
   }
 
   .hero {
     padding: 130px 20px 80px;
-    min-height: 90vh;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-position: center center;
   }
 
   .hero-meta {
@@ -1611,7 +2113,33 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (max-width: 480px) {
-  .menu-grid { grid-template-columns: 1fr; }
+  .menu-category {
+    padding: 36px 12px;
+  }
+
+  .category-title {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu-item {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .menu-item img {
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+  }
+
+  .menu-item h3 { font-size: .82rem; margin-bottom: 4px; }
+  .menu-item .description { display: none; }
+  .menu-item .price { font-size: 1.1rem; }
 
   .hero-cta-group { flex-direction: column; width: 100%; }
   .btn-hero-primary, .btn-hero-ghost { width: 100%; justify-content: center; }

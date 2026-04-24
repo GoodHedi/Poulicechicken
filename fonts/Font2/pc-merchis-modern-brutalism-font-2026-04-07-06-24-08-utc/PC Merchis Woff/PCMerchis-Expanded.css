@@ -1,0 +1,12 @@
+/* Webfont: PCMerchis-Expanded */@font-face {
+    font-family: 'PCMerchisExp';
+    src: url('PCMerchis-Expanded.eot'); /* IE9 Compat Modes */
+    src: url('PCMerchis-Expanded.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('PCMerchis-Expanded.woff') format('woff'), /* Modern Browsers */
+         url('PCMerchis-Expanded.woff2') format('woff2'), /* Modern Browsers */
+         url('PCMerchis-Expanded.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -13,12 +13,14 @@ export default function Header() {
         <div className={`nav-links${menuOpen ? ' active' : ''}`} id="navLinks">
           <div className="nav-left">
             <Link to="/">Accueil</Link>
+            <Link to="/la-marque">La Marque</Link>
             <Link to="/menu">Le Menu</Link>
           </div>
           <Link to="/" className="nav-logo">
             <img src="/images/logo-crop.png" alt="Poulice Chicken" />
           </Link>
           <div className="nav-right">
+            <Link to="/franchise">Franchise</Link>
             <Link to="/contact">Contact</Link>
             <a href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng" target="_blank" rel="noopener noreferrer" className="btn-commander">
               <div><span>Commander</span></div>
