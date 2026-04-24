@@ -1924,6 +1924,90 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
+   MOBILE BOTTOM BAR (responsive only)
+   ========================================================================== */
+.mobile-bottombar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottombar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(10,10,10,.96);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255,214,10,.2);
+    padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 30px rgba(0,0,0,.5);
+  }
+
+  .mobile-bottombar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 4px;
+    color: var(--bone);
+    text-decoration: none;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color .25s;
+  }
+
+  .mobile-bottombar__item:active { color: var(--tape); }
+
+  .mobile-bottombar__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  }
+
+  .mobile-bottombar__icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .mobile-bottombar__icon img {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .mobile-bottombar__label {
+    color: rgba(244,241,234,.85);
+  }
+
+  /* Hide floating bubbles on mobile — replaced by bottombar */
+  .floating-actions {
+    display: none;
+  }
+
+  /* Push scroll-top above the bottombar */
+  .scroll-top {
+    bottom: calc(100px + env(safe-area-inset-bottom)) !important;
+  }
+
+  /* Prevent content being hidden behind the bottombar */
+  body {
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ==========================================================================
    SCROLL TO TOP
    ========================================================================== */
 .scroll-top {
@@ -2042,6 +2126,14 @@ input, textarea, select { font-family: inherit; }
   .nav-links .btn-commander {
     margin-top: 20px;
     width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links .btn-commander > div {
+    padding-left: 2px;
   }
 
   /* Commander button in mobile nav (fixed to top) */

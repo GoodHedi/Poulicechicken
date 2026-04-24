@@ -3,26 +3,27 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const close = () => setMenuOpen(false)
 
   return (
     <header className="header">
       <nav className="nav">
-        <Link to="/" className="nav-logo-mobile">
+        <Link to="/" className="nav-logo-mobile" onClick={close}>
           <img src="/images/logo-crop.png" alt="Poulice Chicken" />
         </Link>
         <div className={`nav-links${menuOpen ? ' active' : ''}`} id="navLinks">
           <div className="nav-left">
-            <Link to="/">Accueil</Link>
-            <Link to="/la-marque">La Marque</Link>
-            <Link to="/menu">Le Menu</Link>
+            <Link to="/" onClick={close}>Accueil</Link>
+            <Link to="/la-marque" onClick={close}>La Marque</Link>
+            <Link to="/menu" onClick={close}>Le Menu</Link>
           </div>
-          <Link to="/" className="nav-logo">
+          <Link to="/" className="nav-logo" onClick={close}>
             <img src="/images/logo-crop.png" alt="Poulice Chicken" />
           </Link>
           <div className="nav-right">
-            <Link to="/franchise">Franchise</Link>
-            <Link to="/contact">Contact</Link>
-            <a href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng" target="_blank" rel="noopener noreferrer" className="btn-commander">
+            <Link to="/franchise" onClick={close}>Franchise</Link>
+            <Link to="/contact" onClick={close}>Contact</Link>
+            <a href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng" target="_blank" rel="noopener noreferrer" className="btn-commander" onClick={close}>
               <div><span>Commander</span></div>
             </a>
           </div>
