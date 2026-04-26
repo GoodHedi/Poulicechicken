@@ -1280,9 +1280,42 @@ input, textarea, select { font-family: inherit; }
    ========================================================================== */
 .section-blank {
   position: relative;
-  padding: 140px 32px;
   background: #000;
-  min-height: 520px;
+  line-height: 0;
+  font-size: 0;
+}
+
+.dual-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+}
+
+.dual-banner__item {
+  display: block;
+  overflow: hidden;
+}
+
+.dual-banner__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dual-banner__item--placeholder {
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .dual-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .dual-banner__item--empty {
+    display: none;
+  }
 }
 
 .signatures-grid {

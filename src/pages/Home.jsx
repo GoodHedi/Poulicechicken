@@ -6,8 +6,20 @@ export default function Home() {
         <img src="/images/logo2.png" alt="Poulice Chicken" className="hero-logo" />
       </section>
 
-      {/* SECTION VIDE */}
-      <section className="section-blank" aria-hidden="true"></section>
+      {/* DUAL BANNER */}
+      <section className="section-blank">
+        <div className="dual-banner">
+          <a
+            href="https://glovoapp.com/en/ma/tanger/stores/poulice-chicken-tng"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dual-banner__item"
+          >
+            <img src="/images/livraison-glovo.jpg" alt="Livraison Glovo" />
+          </a>
+          <div className="dual-banner__item dual-banner__item--placeholder" />
+        </div>
+      </section>
 
       {/* NOTRE RESTAURANT */}
       <section className="section-location" id="restaurant">
