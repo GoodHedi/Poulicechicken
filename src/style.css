@@ -1021,13 +1021,14 @@ input, textarea, select { font-family: inherit; }
 }
 
 .category-title {
-  font-family: 'Choco Foodie', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 400;
   color: var(--bone);
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 60px;
-  letter-spacing: -.01em;
+  letter-spacing: .12em;
   position: relative;
   padding-left: 30px;
 }
@@ -1043,19 +1044,16 @@ input, textarea, select { font-family: inherit; }
 }
 
 .category-title .cimo-italic {
-  font-family: 'Cimo One', sans-serif;
-  font-style: italic;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
 }
 
 .category-title span {
   color: var(--tape);
-  font-family: 'Rush Flow', cursive;
+  font-family: 'Bebas Neue', sans-serif;
   display: inline-block;
-  transform: rotate(-3deg);
-  text-shadow:
-    0 2px 0 var(--tape-deep),
-    0 4px 0 rgba(0,0,0,.4),
-    0 8px 20px rgba(255,214,10,.3);
+  transform: none;
+  text-shadow: none;
 }
 
 .menu-grid {
@@ -1149,10 +1147,11 @@ input, textarea, select { font-family: inherit; }
 
 .menu-item .price {
   display: inline-block;
-  font-family: 'Choco Foodie', sans-serif;
-  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
   color: var(--tape);
-  letter-spacing: .5px;
+  letter-spacing: .02em;
   text-shadow: 0 2px 12px rgba(255,214,10,.35);
   position: relative;
 }
